@@ -29,3 +29,5 @@
 ## 参考
 * Electron  
   https://www.electronjs.org/ja/docs/latest/tutorial/quick-start
+* Electronで1からデスクトップアプリを作り、electron-builderを使ってビルド・リリースするまで  
+  https://qiita.com/saki-engineering/items/203892838e15b3dbd300
