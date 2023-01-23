@@ -25,6 +25,7 @@
 * デスクトップアプリとしてパッケージ化
     ```
     # cd /## foo bar ##/sample-electron
+    # npm install -D electron-packager
     # // windows os app
     # npx electron-packager src app --platform=win32 --arch=x64 --overwrite
     # // mac os app
