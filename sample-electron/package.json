@@ -1,0 +1,18 @@
+{
+  "name": "sample-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-win": "electron-packager ./src app --platform=win32 --arch=x64 --overwrite",
+    "build-mac": "electron-packager ./src app --platform=darwin --arch=x64 --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.3",
+    "electron-packager": "^17.1.1"
+  }
+}
