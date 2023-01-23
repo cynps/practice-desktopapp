@@ -1,0 +1,19 @@
+{
+  "name": "dayleft-notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx electron ./src",
+    "build-win": "electron-packager ./src Dayleft --platform=win32 --arch=x64 --overwrite",
+    "build-mac": "electron-packager ./src Dayleft --platform=darwin --arch=x64 --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.3",
+    "electron-db": "^0.15.7",
+    "electron-packager": "^17.1.1"
+  }
+}
