@@ -14,7 +14,7 @@
 * コーディング
     * ./src フォルダを作成し、以下のファイルを新規作成、格納
         * index.html
-        * index.js
+        * main.js
         * preload.js
         * package.json
 * 実行
@@ -30,3 +30,9 @@
     # // mac os app
     # npx electron-packager src app --platform=darwin --arch=x64 --overwrite
     ```
+
+## notice
+* npm で electron をグローバルインストール（-g オプション）しない
+* コマンドは npm script に書く
+    * package.json の "scripts": {} 内
+    * 実行コマンドは npm run コマンド名
