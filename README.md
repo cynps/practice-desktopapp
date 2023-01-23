@@ -7,6 +7,7 @@
     # cd ./## project name ##
     # npm init -y
     # npm install -D electron
+    # npm install -D electron-packager
     # touch .gitignore
     # mkdir src
     # cd src
