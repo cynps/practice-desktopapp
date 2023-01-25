@@ -27,17 +27,21 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("electronAPI", {
-    ping: () => ipcRenderer.invoke("ping"),
-    setTitle: (title) => ipcRenderer.send("set-title", title),
+    // ping: () => ipcRenderer.invoke("ping"),
+    // setTitle: (title) => ipcRenderer.send("set-title", title),
     upsert: (title, date) => ipcRenderer.send("upsert", title, date),
-    onUpdateCounter: (callback) => ipcRenderer.on("update-counter", callback),
+    // onUpdateCounter: (callback) => ipcRenderer.on("update-counter", callback),
+    delete: (title) => ipcRenderer.send("delete", title),
+    // onDebugLog: (callback) => ipcRenderer.send("debug-log", callback),
+    initDb: () => ipcRenderer.invoke("load:initDb"),
+
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-    const counter = document.getElementById("message");
-    ipcRenderer.on("update-counter", (_event, value) => {
-        const oldValue = Number(counter.innerText);
-        const newValue = oldValue + value;
-        counter.innerText = newValue;
-    });
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//     const counter = document.getElementById("message");
+//     ipcRenderer.on("update-counter", (_event, value) => {
+//         const oldValue = Number(counter.innerHTML);
+//         const newValue = oldValue + value;
+//         counter.innerHTML = newValue;
+//     });
+// });

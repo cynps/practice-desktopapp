@@ -2,18 +2,25 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-        <title>Hello World!</title>
+        <title>Dayleft notifier</title>
     </head>
     <body>
-        <h1 id="message">Hi Electron!</h1>
         <!-- <p>
             We ar using Node.js <span id="node-version"></span>,<br />
             Chromium <span id="chrome-version"></span>, <br />
             and Electron <span id="electron-version"></span>.
         </p> -->
         Title: <input id="title" /><br />
-        Date: <input id="date" /><br />
+        Date: <input id="date" type="date"/><br />
         <button id="btn" type="button">Set</button>
+        <!-- <p><s>ラベルクリックで削除</s></p> -->
+        <!-- Current value: <strong id="counter">0</strong> -->
+        <table id="dataTable">
+            <thead></thead>
+            <tbody><tr></tr></tbody>
+        </table>
+        <button id="delete" type="button">delete</button>
+
         <script src="./renderer.js"></script>
     </body>
 </html>

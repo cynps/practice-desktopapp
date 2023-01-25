@@ -1,18 +1,37 @@
 {
   "name": "dayleft-notifier",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "how many days left before target",
+  "main": "src/main.js",
+  "build": {
+    "appId": "net.cynps.dayleft-notifier",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src",
+      "package.json",
+      "package-lock.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
   "scripts": {
     "test": "npx electron ./src",
-    "build-win": "electron-packager ./src Dayleft --platform=win32 --arch=x64 --overwrite",
-    "build-mac": "electron-packager ./src Dayleft --platform=darwin --arch=x64 --overwrite"
+    "pack:win": "build --win --x64",
+    "build-win": "electron-packager ./src Dayleft --platform=win32 --arch=x64 --overwrite"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^22.0.3",
+    "electron-builder": "^23.6.0",
     "electron-db": "^0.15.7",
     "electron-packager": "^17.1.1"
   }
